@@ -1,0 +1,137 @@
+#container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+}
+
+#container > .burger-btn {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  height: 480px;
+  overflow-y: auto;
+}
+
+nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track (background) */
+nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (the draggable part) */
+nav::-webkit-scrollbar-thumb {
+  background: #5e2a005a;
+  border-radius: 10px;
+}
+
+/* Hover effect 
+nav::-webkit-scrollbar-thumb:hover {
+  background: #5e2a005a;
+}
+*/
+
+nav > a {
+  padding: 8px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+nav > a.active {
+  background-color: white;
+  color: rgb(136, 69, 14);
+  transition: all 0.2s ease-in;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+main {
+  background-color: white;
+}
+
+.side-bar {
+  background-color: #7e5f46;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.side-bar > .open {
+  display: none;
+  color: white;
+  background-color: brown;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 0 0 0 10px;
+  font-size: 20px;
+}
+
+.side-bar > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px;
+  color: rgb(232, 232, 232);
+}
+
+.side-bar > button {
+  padding: 10px 20px;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45px auto;
+  }
+
+  #container > .burger-btn {
+    display: flex;
+    width: 100vw;
+    text-align: start;
+    height: 45px;
+    background: brown;
+    align-items: center;
+  }
+
+  #container > .burger-btn > button {
+    color: white;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: none;
+  }
+
+  .side-bar {
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    left: -250px;
+
+    width: 250px;
+    height: 100vh;
+
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
+  }
+
+  .side-bar.open {
+    left: 0;
+  }
+
+  .side-bar > button.open {
+    display: block;
+  }
+
+  nav {
+    height: 470px;
+  }
+}

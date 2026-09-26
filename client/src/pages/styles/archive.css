@@ -1,0 +1,235 @@
+.archive {
+  padding: 10px 15px;
+}
+
+.archive > h2 {
+  text-align: start;
+  color: #935b29;
+  border-bottom: 1px solid #935b29;
+  margin-bottom: 20px;
+}
+
+.archive > div > div:nth-child(1) > button {
+  border: 1px solid gray;
+  padding: 3px 15px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 8px;
+  margin-right: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.archive > div > div:nth-child(1) > button.active {
+  background-color: rgb(173, 173, 173);
+}
+
+.archive-data-container {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.archive-data-container > section > div:nth-child(1) {
+  border: none;
+  border-radius: 0;
+}
+
+.archive-data-container > section > div:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+
+.archive-data-container > section > div,
+.category-archive,
+.no-archive {
+  margin-bottom: 5px;
+  border: 1px solid rgb(161, 161, 161);
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 700px;
+
+  overflow: hidden;
+}
+
+.archive-data-container > section > div:nth-child(1),
+.category-archive,
+.no-archive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.archive-data-container > section > div > p,
+.category-archive > p {
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  font-size: 18px;
+}
+
+.archive-data-container > section > div:nth-child(1) > button {
+  border: none;
+  padding: 3px 2px;
+  border-radius: 3px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.archive-data-container > section > div:nth-child(1) > button:hover {
+  background-color: #7e5f46;
+  color: white;
+}
+
+.archive-data-container > section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.archive-data-container > section > div > div > button,
+.category-archive > div > button {
+  height: inherit;
+  border: none;
+  color: white;
+  font-size: 12px;
+  transition: all 0.1s ease-in-out;
+  padding: 12px;
+}
+
+.archive-data-container > section > div > div > button:nth-child(1),
+.category-archive > div > button:nth-child(1) {
+  background-color: rgb(207, 151, 46);
+}
+
+.archive-data-container > section > div > div > button:nth-child(2),
+.category-archive > div > button:nth-child(2) {
+  background-color: brown;
+}
+
+.archive-data-container > section > div > div > button:hover,
+.category-archive > div > button:hover {
+  opacity: 0.7;
+}
+
+.no-archive {
+  padding: 4px;
+  justify-content: center !important;
+}
+
+/* pop up modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up {
+  width: 500px;
+  background-color: #7e5f46;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgb(44, 44, 44);
+  border: 1px solid rgb(182, 182, 182);
+  color: white;
+}
+
+.pop-up > p {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.pop-up > div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.pop-up > div > button {
+  padding: 7px 25px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.pop-up > div > button:nth-child(1) {
+  background-color: rgb(117, 117, 117);
+}
+
+.pop-up > div > button:nth-child(2) {
+  background-color: brown;
+}
+
+.pop-up > div > button:hover {
+  border: 1px solid white;
+  padding: 6px 24px;
+}
+
+.archive-data-container > section > div {
+  position: relative;
+  overflow: visible;
+}
+
+.three-dot-modal {
+  position: absolute;
+
+  left: 101%;
+  top: 0;
+  border-radius: 5px !important;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.three-dot-modal > button {
+  padding: 10px !important;
+  color: white !important;
+  background-color: #7e5f46 !important;
+  width: 100px;
+}
+
+.overlay {
+  background-color: rgba(128, 128, 128, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay > .popup {
+  padding: 50px 70px;
+  text-align: center;
+  background-color: brown;
+  border-radius: 10px;
+  color: white;
+  border: 2px solid gray;
+}
+
+@media (max-width: 768px) {
+  .archive-data-container > div {
+    width: inherit;
+    column-gap: 20px;
+  }
+
+  .archive-data-container > div > p {
+    font-size: 16px;
+    padding: 3px 0;
+  }
+
+  .archive-data-container > div > div > button {
+    padding: 7px;
+  }
+}

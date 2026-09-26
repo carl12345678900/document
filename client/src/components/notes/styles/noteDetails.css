@@ -1,0 +1,215 @@
+.note-details {
+  padding: 10px 15px 0;
+}
+
+.note-details > div:nth-child(1) > button {
+  color: white;
+  border: none;
+  background-color: #636363;
+  font-size: 20px;
+  padding: 4px 15px;
+}
+
+.note-details > div:nth-child(1) {
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  column-gap: 5px;
+  border-bottom: 2px solid #7e5f46;
+}
+
+.note-details > div > #title-textarea {
+  border: none;
+  border-left: 1px solid #7c5230;
+  outline: none;
+  flex: 3;
+  border-radius: 0;
+  padding: 0 10px;
+  resize: none;
+  font-size: 24px;
+  color: #7c5230;
+}
+
+.note-details > div > div > button {
+  background-color: #81522c;
+  color: white;
+  font-size: 20px;
+  padding: 4px 15px;
+  border: none;
+  text-decoration: none;
+  transition: all 0.1s ease-in;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-details > div > div > button:hover {
+  background-color: #81522c89;
+}
+
+.note-details > div > div > button > img {
+  width: 20px;
+}
+
+#note-details-textarea {
+  resize: none;
+  padding: 10px;
+  height: calc(100vh - 117px);
+  width: calc(100% - 20px);
+  border: 2px solid #7e5f46;
+  outline: none;
+  font-size: 16px;
+}
+
+.select-btn {
+  padding: 3px 10px;
+  border: 1px solid #7e5f46;
+  background-color: white;
+  border-radius: 5px;
+  color: orange;
+  font-weight: bold;
+}
+
+.select-btn-box > span {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Pop up Catgeory Modal */
+.show-category-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin: auto auto;
+  background-color: #7e5f46;
+  padding: 10px 20px 20px;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-category-modal > div > h4,
+.show-category-modal > div > span {
+  color: white;
+}
+
+.show-category-modal > div > span {
+  background-color: red;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.show-category-modal > div > span:hover {
+  background-color: rgba(255, 0, 0, 0.411);
+}
+
+.show-category-modal > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+  padding-bottom: 5px;
+}
+
+.show-category-modal > div:nth-child(2) {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(100% / 5), 1fr));
+  max-width: 1000px;
+  gap: 10px;
+  text-align: center;
+}
+
+.show-category-modal > div:nth-child(2) > div {
+  color: white;
+}
+
+.show-category-modal > div:nth-child(2) > button {
+  color: white;
+  background-color: orange;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+}
+
+.show-category-modal > div:nth-child(2) > button.selected-category {
+  border: 2px solid orange;
+  background-color: white;
+  color: orange;
+  padding: 5px 8px;
+}
+
+/* message */
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 0 0 0 5px;
+}
+
+/* ask top */
+
+@media (max-width: 768px) {
+  .note-details > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .note-details > div:nth-child(1) > button {
+    margin-right: auto;
+  }
+
+  .note-details > div > #title-textarea {
+    border: 1px solid #7c5230;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    resize: none;
+    font-size: 24px;
+  }
+
+  .note-details > div:nth-child(1) > div > button {
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  .note-details > div > div > button:hover {
+    background-color: #81522c89;
+  }
+
+  .note-details > div > div > button > img {
+    width: 20px;
+  }
+
+  #add-notes-textarea {
+    height: calc(100vh - 240px);
+    width: calc(100% - 20px);
+    border: 2px solid #7e5f46;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .success,
+  .error {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+}

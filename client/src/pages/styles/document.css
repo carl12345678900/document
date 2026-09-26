@@ -1,0 +1,106 @@
+.notes {
+  padding: 10px 15px;
+}
+
+.notes > h2 {
+  text-align: start;
+  color: #935b29;
+  border-bottom: 1px solid #935b29;
+  margin-bottom: 20px;
+}
+
+.notes > a {
+  background-color: #7c5230;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.1s ease-in;
+}
+
+.notes > a:hover {
+  background-color: rgba(124, 82, 48, 0.7);
+}
+
+.notes-box {
+  margin-top: 20px;
+}
+
+.notes-box > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.notes-box > div > p {
+  font-size: 16px;
+}
+
+.notes-box > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notes-box > div > div > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.notes-box > div > div > button:hover {
+  background-color: #7e5f46;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.notes-box > div > div > button > svg {
+  width: 20px;
+}
+
+.notes-box > .no-docs {
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: none;
+  width: inherit;
+  color: #7c5230;
+  margin-top: 10vh;
+}
+
+/* toggle */
+.notes-box > div > .toggle {
+  display: block;
+  position: absolute;
+  right: 50px;
+  top: 5px;
+  background-color: brown;
+  color: white;
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.toggle > div {
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle > div:hover {
+  opacity: 0.5;
+}

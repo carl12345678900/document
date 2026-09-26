@@ -1,0 +1,122 @@
+.dashboard > h2 {
+  text-align: start;
+  color: #935b29;
+}
+
+.dashboard {
+  padding: 20px 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  margin: 10px 0 20px;
+}
+
+.cards > div {
+  padding: 10px 20px 10px 15px;
+  margin: 3px;
+  color: white;
+  flex-grow: 1;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.cards > div > span {
+  font-size: 35px;
+  color: white;
+  margin-top: auto;
+}
+
+.cards > div:nth-child(1) {
+  background-color: #4b7e46;
+}
+
+.cards > div:nth-child(2) {
+  background-color: #46657e;
+}
+
+.cards > div:nth-child(3) {
+  background-color: #7e5f46;
+}
+
+.cards > div:nth-child(4) {
+  background-color: #7e4647;
+}
+
+.cards > div:nth-child(5) {
+  background-color: #7e7e46;
+}
+
+.dashboard > div > h3 {
+  text-align: start;
+  color: rgb(39, 39, 39);
+}
+
+.table {
+  background-color: rgb(185, 185, 185);
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  width: fit-content;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: start;
+  color: rgb(11, 11, 11);
+}
+
+th:nth-child(1) {
+  width: 200px;
+}
+
+th:nth-child(2) {
+  width: 150px;
+}
+
+th:nth-child(3) {
+  width: 100px;
+}
+
+th:nth-child(4) {
+  width: 130px;
+}
+
+thead {
+  background-color: rgb(185, 185, 185);
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+tr {
+  border-bottom: 3px solid rgb(185, 185, 185);
+}
+
+td {
+  background-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* message */
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 0 0 0 5px;
+}

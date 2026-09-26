@@ -1,0 +1,308 @@
+.categories {
+  padding: 10px 15px;
+}
+
+.categories > h2 {
+  text-align: start;
+  color: #935b29;
+  border-bottom: 1px solid #935b29;
+  margin-bottom: 20px;
+}
+.categories > form {
+  background-color: #7e5f46;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  width: fit-content;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: start;
+  column-gap: 5px;
+}
+
+.categories > form > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.categories > form > div > label {
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+.categories > form > div > input {
+  width: 60%;
+  padding: 6px 20px;
+  border: 2px solid white;
+  font-size: 16px;
+  border-radius: 11px 0 0 11px;
+}
+
+.categories > form > div > input.editing:focus {
+  border: 2px solid rgb(55, 103, 193);
+  outline: none;
+}
+
+.categories > form > div > input.submitting:focus {
+  border: 2px solid orange;
+  outline: none;
+}
+
+.categories > form > div > button {
+  padding: 8px 20px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 0 11px 11px 0;
+}
+
+.categories > form > div > button.submit-form {
+  background-color: orange;
+}
+.categories > form > div > button.edit-form {
+  background-color: rgb(55, 103, 193);
+}
+
+.categories > form > button.cancel-btn {
+  padding: 8px 20px;
+  border: none;
+  color: white;
+  background-color: #b1afaf;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* table */
+
+.category-list {
+  margin-top: 20px;
+  width: 70%;
+}
+
+.category-list > h3 {
+  color: #935b29;
+  border-bottom: 2px solid #935b29;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid gray;
+  transition: all 0.2s ease-in;
+}
+
+.category-item:hover {
+  background-color: #cac9c9;
+}
+
+.category-item > .btn {
+  display: flex;
+  column-gap: 5px;
+}
+
+.category-item > .btn > button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  transition: all 0.2s ease-in;
+}
+
+.category-item > .btn > button:hover {
+  opacity: 0.7;
+}
+
+.category-item > .btn > .edit {
+  background-color: rgb(60, 170, 60);
+}
+
+.category-item > .btn > .remove {
+  background-color: rgb(185, 66, 66);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pop up modal */
+.pop-up {
+  width: 500px;
+  background-color: #7e5f46;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 rgb(44, 44, 44);
+  border: 1px solid rgb(182, 182, 182);
+  color: white;
+}
+
+.pop-up > p {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.pop-up > div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.pop-up > div > button {
+  padding: 7px 25px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.pop-up > div > button:nth-child(1) {
+  background-color: rgb(117, 117, 117);
+}
+
+.pop-up > div > button:nth-child(2) {
+  background-color: brown;
+}
+
+.pop-up > div > button:hover {
+  border: 1px solid white;
+  padding: 6px 24px;
+}
+
+/* message */
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border-radius: 0 0 0 5px;
+}
+
+/* query */
+
+@media (max-width: 768px) {
+  .categories > form {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .categories > form > div {
+    width: auto;
+    display: grid;
+    grid-template-columns: 12fr 1fr;
+  }
+
+  .categories > form > div > label {
+    margin-bottom: 5px;
+    grid-column: 1 / -1;
+  }
+
+  .categories > form > div > input {
+    width: 100%;
+  }
+
+  .categories > form > button.cancel-btn {
+    margin-top: 5px;
+    width: inherit;
+    border-radius: 7px;
+  }
+
+  .category-list {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .category-list > h3 {
+    color: #935b29;
+    border-bottom: 2px solid #935b29;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    border-bottom: 1px solid gray;
+    transition: all 0.2s ease-in;
+  }
+
+  .category-item:hover {
+    background-color: #cac9c9;
+  }
+
+  .category-item > .btn {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  .category-item > .btn > button {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.2s ease-in;
+  }
+
+  .category-item > .btn > button:hover {
+    opacity: 0.7;
+  }
+
+  .category-item > .btn > .edit {
+    background-color: rgb(60, 170, 60);
+  }
+
+  .category-item > .btn > .remove {
+    background-color: rgb(185, 66, 66);
+  }
+
+  /* pop up modal */
+  .pop-up {
+    width: 80vw;
+    padding: 10px;
+  }
+
+  .pop-up > div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .pop-up > div > button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .pop-up > div > button:hover {
+    padding: 4px 14px;
+  }
+
+  .success,
+  .error {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+}
